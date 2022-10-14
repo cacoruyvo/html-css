@@ -20,10 +20,13 @@
 
         div#q1 {
             background-color: skyblue;
+            position: relative;
         }
 
         div#q2 {
             background-image: linear-gradient(to bottom, yellow, red);
+            background-color: skyblue;
+            position: relative;
         }
 
         div#q3 {
@@ -45,18 +48,30 @@
         div#q8 {
             background-image: url('imagens/wallpaper004.jpg');
         }
-        h1 {
-            height: 100vh;
-            width: auto;
+        #qblue {
+            
+            width: 100%;
+            position: absolute;
+            left: 40%;
+            top: 35%;
+            
+            
+        }
+        #qred {
+            width: 100%;
+            position: absolute;
+            left: 40%;
+            top: 35%;
+            
         }
     </style>
 </head>
 <body>
     <div class="quadrado" id="q1">
-        <h1>ola!</h1>
+        <h1 id="qblue">ola</h1>
     </div>
     <div class="quadrado" id="q2">
-
+        <h1 id="qred">ola!</h1>
     </div>
     <div class="quadrado" id="q3">
 
