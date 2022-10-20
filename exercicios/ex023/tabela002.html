@@ -13,27 +13,52 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
         td, th {
             border: 1px solid black;
             padding: 10px;
         }
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
         thead, tfoot {
             background-color: gray;
             color: white;
         }
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+        tbody > tr:nth-child(odd) {
+            background-color: rgba(255, 255, 255, 0.685);
+        }
+        tbody > tr:nth-child(even) {
+            background-color: rgba(211, 211, 211, 0.568);
+        }
+        /* o tr:nth-child() serve para deixar a tabela listrada, ou voce coloca 2n ou em ingles (odd)impar ou (even) par*/
         td.num {
             text-align: right;
+        }
+        p {
+            width: 500px;
         }
     </style>
 </head>
 <body>
-    <h1>Os estados mais perigosos<br> para os gays no Brasil</h1>
+    
     <table>
+        <caption>
+            Os estados mais perigosos para os gays no Brasil
+        </caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>Populção</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">Populção</th>
             </tr>
         </thead>
         <tbody>
@@ -104,10 +129,16 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Porcentagem por Milhão de Habitantes </th>
-                <td class="num"><strong>-</strong></td>
+                <th scope="row" colspan="2">Porcentagem por Milhão de Habitantes </th>
+                
             </tr>
         </tfoot>
     </table>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis natus consectetur saepe est laudantium illo sit, tempora minima molestias rem iusto officia repellendus quia reiciendis quis corporis dolorum, labore quas! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto nam numquam tempora perspiciatis impedit pariatur dignissimos, officia error harum enim iusto magni, maiores velit totam illum aliquam alias distinctio soluta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, expedita? Natus veniam quaerat soluta voluptatum maxime hic consectetur a, dolores quae in dolor. Eos commodi quasi autem perspiciatis, dicta porro. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam odio at veritatis repellat perferendis cupiditate officia consectetur nostrum, ea iste ipsum maiores temporibus vitae nihil corporis omnis possimus voluptatem culpa.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis natus consectetur saepe est laudantium illo sit, tempora minima molestias rem iusto officia repellendus quia reiciendis quis corporis dolorum, labore quas! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto nam numquam tempora perspiciatis impedit pariatur dignissimos, officia error harum enim iusto magni, maiores velit totam illum aliquam alias distinctio soluta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, expedita? Natus veniam quaerat soluta voluptatum maxime hic consectetur a, dolores quae in dolor. Eos commodi quasi autem perspiciatis, dicta porro. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam odio at veritatis repellat perferendis cupiditate officia consectetur nostrum, ea iste ipsum maiores temporibus vitae nihil corporis omnis possimus voluptatem culpa.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis natus consectetur saepe est laudantium illo sit, tempora minima molestias rem iusto officia repellendus quia reiciendis quis corporis dolorum, labore quas! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto nam numquam tempora perspiciatis impedit pariatur dignissimos, officia error harum enim iusto magni, maiores velit totam illum aliquam alias distinctio soluta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, expedita? Natus veniam quaerat soluta voluptatum maxime hic consectetur a, dolores quae in dolor. Eos commodi quasi autem perspiciatis, dicta porro. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam odio at veritatis repellat perferendis cupiditate officia consectetur nostrum, ea iste ipsum maiores temporibus vitae nihil corporis omnis possimus voluptatem culpa.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis natus consectetur saepe est laudantium illo sit, tempora minima molestias rem iusto officia repellendus quia reiciendis quis corporis dolorum, labore quas! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto nam numquam tempora perspiciatis impedit pariatur dignissimos, officia error harum enim iusto magni, maiores velit totam illum aliquam alias distinctio soluta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, expedita? Natus veniam quaerat soluta voluptatum maxime hic consectetur a, dolores quae in dolor. Eos commodi quasi autem perspiciatis, dicta porro. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam odio at veritatis repellat perferendis cupiditate officia consectetur nostrum, ea iste ipsum maiores temporibus vitae nihil corporis omnis possimus voluptatem culpa.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis natus consectetur saepe est laudantium illo sit, tempora minima molestias rem iusto officia repellendus quia reiciendis quis corporis dolorum, labore quas! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto nam numquam tempora perspiciatis impedit pariatur dignissimos, officia error harum enim iusto magni, maiores velit totam illum aliquam alias distinctio soluta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, expedita? Natus veniam quaerat soluta voluptatum maxime hic consectetur a, dolores quae in dolor. Eos commodi quasi autem perspiciatis, dicta porro. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam odio at veritatis repellat perferendis cupiditate officia consectetur nostrum, ea iste ipsum maiores temporibus vitae nihil corporis omnis possimus voluptatem culpa.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis natus consectetur saepe est laudantium illo sit, tempora minima molestias rem iusto officia repellendus quia reiciendis quis corporis dolorum, labore quas! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto nam numquam tempora perspiciatis impedit pariatur dignissimos, officia error harum enim iusto magni, maiores velit totam illum aliquam alias distinctio soluta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, expedita? Natus veniam quaerat soluta voluptatum maxime hic consectetur a, dolores quae in dolor. Eos commodi quasi autem perspiciatis, dicta porro. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam odio at veritatis repellat perferendis cupiditate officia consectetur nostrum, ea iste ipsum maiores temporibus vitae nihil corporis omnis possimus voluptatem culpa.</p>
 </body>
 </html>
